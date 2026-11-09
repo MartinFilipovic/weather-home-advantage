@@ -1,0 +1,3568 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_33d5b80a5e1bc775e541fb152bdfe78d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                bottom: 50px; right: 50px; width: 180px; height: 110px; 
+                background-color: white; z-index:9999; font-size:14px;
+                border:2px solid grey; border-radius: 5px; padding: 10px;">
+      <b>Ligen-Legende</b><br>
+      <i class="fa fa-map-marker" style="color:blue"></i> Premier League<br>
+      <i class="fa fa-map-marker" style="color:red"></i> Bundesliga<br>
+      <i class="fa fa-map-marker" style="color:orange"></i> La Liga
+    </div>
+    
+    
+            <div class="folium-map" id="map_33d5b80a5e1bc775e541fb152bdfe78d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_33d5b80a5e1bc775e541fb152bdfe78d = L.map(
+                "map_33d5b80a5e1bc775e541fb152bdfe78d",
+                {
+                    center: [46.79913763888889, -1.0964076388888886],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_75d4b30f00293f42770f83101e026d00 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_75d4b30f00293f42770f83101e026d00.addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var marker_890e50ca7e09b46a29508358e4c37bbc = L.marker(
+                [53.8, -2.23333],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_598467fdc8d1a247d73f1dbcaad734f2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8cbb0f80d3d6dfc1ab3191fb38affb01 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ab77afa6b276a1e8e59d32233e508c4c = $(`<div id="html_ab77afa6b276a1e8e59d32233e508c4c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Burnley FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 53.8000, -2.2333     </div>     </div>`)[0];
+                popup_8cbb0f80d3d6dfc1ab3191fb38affb01.setContent(html_ab77afa6b276a1e8e59d32233e508c4c);
+            
+        
+
+        marker_890e50ca7e09b46a29508358e4c37bbc.bindPopup(popup_8cbb0f80d3d6dfc1ab3191fb38affb01)
+        ;
+
+        
+    
+    
+            marker_890e50ca7e09b46a29508358e4c37bbc.bindTooltip(
+                `<div>
+                     Burnley FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_890e50ca7e09b46a29508358e4c37bbc.setIcon(icon_598467fdc8d1a247d73f1dbcaad734f2);
+            
+    
+            var marker_8cb9fb5c63cd8d1b3bcb4be733ddf774 = L.marker(
+                [51.50853, -0.12574],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_73927e1aed77f27dd609e2137962a358 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1e799c9ff4af93c8074e5e9dff49a53f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d3b306d605c63896314e86c62ca0151b = $(`<div id="html_d3b306d605c63896314e86c62ca0151b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Arsenal FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 51.5085, -0.1257     </div>     </div>`)[0];
+                popup_1e799c9ff4af93c8074e5e9dff49a53f.setContent(html_d3b306d605c63896314e86c62ca0151b);
+            
+        
+
+        marker_8cb9fb5c63cd8d1b3bcb4be733ddf774.bindPopup(popup_1e799c9ff4af93c8074e5e9dff49a53f)
+        ;
+
+        
+    
+    
+            marker_8cb9fb5c63cd8d1b3bcb4be733ddf774.bindTooltip(
+                `<div>
+                     Arsenal FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8cb9fb5c63cd8d1b3bcb4be733ddf774.setIcon(icon_73927e1aed77f27dd609e2137962a358);
+            
+    
+            var marker_ea217993ca9227daa575c788fc01dc2b = L.marker(
+                [50.72048, -1.8795],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_8f951c8c30316dec6f309829ea83e764 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f2ae22eb1ad5dcf4693a769d7847a223 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e89cab5ee6e57676c9081aba4e06e794 = $(`<div id="html_e89cab5ee6e57676c9081aba4e06e794" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>AFC Bournemouth</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 50.7205, -1.8795     </div>     </div>`)[0];
+                popup_f2ae22eb1ad5dcf4693a769d7847a223.setContent(html_e89cab5ee6e57676c9081aba4e06e794);
+            
+        
+
+        marker_ea217993ca9227daa575c788fc01dc2b.bindPopup(popup_f2ae22eb1ad5dcf4693a769d7847a223)
+        ;
+
+        
+    
+    
+            marker_ea217993ca9227daa575c788fc01dc2b.bindTooltip(
+                `<div>
+                     AFC Bournemouth (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ea217993ca9227daa575c788fc01dc2b.setIcon(icon_8f951c8c30316dec6f309829ea83e764);
+            
+    
+            var marker_b42f6dc84d58a5c68533b4e4967980da = L.marker(
+                [50.82838, -0.13947],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_8bdac79d54b59e87f53054fe3becf7f2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2f56c2fcb5529e90e0b73a7c5c0cf6d3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c0b2e7343f0da6b09e362aad111c0023 = $(`<div id="html_c0b2e7343f0da6b09e362aad111c0023" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Brighton & Hove Albion FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 50.8284, -0.1395     </div>     </div>`)[0];
+                popup_2f56c2fcb5529e90e0b73a7c5c0cf6d3.setContent(html_c0b2e7343f0da6b09e362aad111c0023);
+            
+        
+
+        marker_b42f6dc84d58a5c68533b4e4967980da.bindPopup(popup_2f56c2fcb5529e90e0b73a7c5c0cf6d3)
+        ;
+
+        
+    
+    
+            marker_b42f6dc84d58a5c68533b4e4967980da.bindTooltip(
+                `<div>
+                     Brighton & Hove Albion FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b42f6dc84d58a5c68533b4e4967980da.setIcon(icon_8bdac79d54b59e87f53054fe3becf7f2);
+            
+    
+            var marker_2e554322f51e035f0de9a763fc7167d8 = L.marker(
+                [53.41058, -2.97794],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_89cfb059892bdc8968fadc452db3ed7f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_265666f6bdcc608360e9a9374e3a18a9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6a6a000331efc709e5d2dc3cf06ec853 = $(`<div id="html_6a6a000331efc709e5d2dc3cf06ec853" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Everton FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 53.4106, -2.9779     </div>     </div>`)[0];
+                popup_265666f6bdcc608360e9a9374e3a18a9.setContent(html_6a6a000331efc709e5d2dc3cf06ec853);
+            
+        
+
+        marker_2e554322f51e035f0de9a763fc7167d8.bindPopup(popup_265666f6bdcc608360e9a9374e3a18a9)
+        ;
+
+        
+    
+    
+            marker_2e554322f51e035f0de9a763fc7167d8.bindTooltip(
+                `<div>
+                     Everton FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2e554322f51e035f0de9a763fc7167d8.setIcon(icon_89cfb059892bdc8968fadc452db3ed7f);
+            
+    
+            var marker_bcde9bd349eeed3527c49fdcab7c6a34 = L.marker(
+                [53.38297, -1.4659],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_6016f617177bff74e15acc77fa8f4b66 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4589c1440daf8890ef890f03d1bdba03 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9841239c5b5490880c17d3cbe297af87 = $(`<div id="html_9841239c5b5490880c17d3cbe297af87" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Sheffield United FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 53.3830, -1.4659     </div>     </div>`)[0];
+                popup_4589c1440daf8890ef890f03d1bdba03.setContent(html_9841239c5b5490880c17d3cbe297af87);
+            
+        
+
+        marker_bcde9bd349eeed3527c49fdcab7c6a34.bindPopup(popup_4589c1440daf8890ef890f03d1bdba03)
+        ;
+
+        
+    
+    
+            marker_bcde9bd349eeed3527c49fdcab7c6a34.bindTooltip(
+                `<div>
+                     Sheffield United FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bcde9bd349eeed3527c49fdcab7c6a34.setIcon(icon_6016f617177bff74e15acc77fa8f4b66);
+            
+    
+            var marker_160816871f81e7b1adc6164ef557a54d = L.marker(
+                [54.97328, -1.61396],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_c9144a486712ab073edff66f8cc1a0fd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3e398665a69960d894deb76ccabfea6d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3e76dfbba5b7eea15a9e250fee8c31ae = $(`<div id="html_3e76dfbba5b7eea15a9e250fee8c31ae" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Newcastle United FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 54.9733, -1.6140     </div>     </div>`)[0];
+                popup_3e398665a69960d894deb76ccabfea6d.setContent(html_3e76dfbba5b7eea15a9e250fee8c31ae);
+            
+        
+
+        marker_160816871f81e7b1adc6164ef557a54d.bindPopup(popup_3e398665a69960d894deb76ccabfea6d)
+        ;
+
+        
+    
+    
+            marker_160816871f81e7b1adc6164ef557a54d.bindTooltip(
+                `<div>
+                     Newcastle United FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_160816871f81e7b1adc6164ef557a54d.setIcon(icon_c9144a486712ab073edff66f8cc1a0fd);
+            
+    
+            var marker_80b1889b41fcebd4745974753cea4b86 = L.marker(
+                [51.50853, -0.12574],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_fb0032df0a290ef6cdc02f1eb6bfca21 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4963416b1b0edfbcc8599bfa7010bb7b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_de37acddd3c564fae407e938c2b3935f = $(`<div id="html_de37acddd3c564fae407e938c2b3935f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Brentford FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 51.5085, -0.1257     </div>     </div>`)[0];
+                popup_4963416b1b0edfbcc8599bfa7010bb7b.setContent(html_de37acddd3c564fae407e938c2b3935f);
+            
+        
+
+        marker_80b1889b41fcebd4745974753cea4b86.bindPopup(popup_4963416b1b0edfbcc8599bfa7010bb7b)
+        ;
+
+        
+    
+    
+            marker_80b1889b41fcebd4745974753cea4b86.bindTooltip(
+                `<div>
+                     Brentford FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_80b1889b41fcebd4745974753cea4b86.setIcon(icon_fb0032df0a290ef6cdc02f1eb6bfca21);
+            
+    
+            var marker_28d0adade0d61f842897c41bb9de6a41 = L.marker(
+                [51.50853, -0.12574],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_0687fa2bb16873093dda6ccbaf2bf6cf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c8bd029537d428d5fa047f571b1bd661 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_311df817bce49f2462d25f1e97fce7f1 = $(`<div id="html_311df817bce49f2462d25f1e97fce7f1" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Chelsea FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 51.5085, -0.1257     </div>     </div>`)[0];
+                popup_c8bd029537d428d5fa047f571b1bd661.setContent(html_311df817bce49f2462d25f1e97fce7f1);
+            
+        
+
+        marker_28d0adade0d61f842897c41bb9de6a41.bindPopup(popup_c8bd029537d428d5fa047f571b1bd661)
+        ;
+
+        
+    
+    
+            marker_28d0adade0d61f842897c41bb9de6a41.bindTooltip(
+                `<div>
+                     Chelsea FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_28d0adade0d61f842897c41bb9de6a41.setIcon(icon_0687fa2bb16873093dda6ccbaf2bf6cf);
+            
+    
+            var marker_b79384979371f71a9f18af7a7f3dbb89 = L.marker(
+                [53.48095, -2.23743],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_c18fd7c4d348f9b3c14c8cbf3e30dc26 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6d3c5fff8ed291a1ff10ec1027263a1b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e35604318efbe2a5d106124eb2326359 = $(`<div id="html_e35604318efbe2a5d106124eb2326359" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Manchester United FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 53.4809, -2.2374     </div>     </div>`)[0];
+                popup_6d3c5fff8ed291a1ff10ec1027263a1b.setContent(html_e35604318efbe2a5d106124eb2326359);
+            
+        
+
+        marker_b79384979371f71a9f18af7a7f3dbb89.bindPopup(popup_6d3c5fff8ed291a1ff10ec1027263a1b)
+        ;
+
+        
+    
+    
+            marker_b79384979371f71a9f18af7a7f3dbb89.bindTooltip(
+                `<div>
+                     Manchester United FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b79384979371f71a9f18af7a7f3dbb89.setIcon(icon_c18fd7c4d348f9b3c14c8cbf3e30dc26);
+            
+    
+            var marker_c2a11ff617f8a5b568567b93dbdefd45 = L.marker(
+                [52.92979, -1.12537],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_9a37dba5b223b8796ddbbdb9cc4292fb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_52d87907c7be1524a164d7ac4f59b0ac = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0bc139d9429b165dd046487729789911 = $(`<div id="html_0bc139d9429b165dd046487729789911" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Nottingham Forest FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 52.9298, -1.1254     </div>     </div>`)[0];
+                popup_52d87907c7be1524a164d7ac4f59b0ac.setContent(html_0bc139d9429b165dd046487729789911);
+            
+        
+
+        marker_c2a11ff617f8a5b568567b93dbdefd45.bindPopup(popup_52d87907c7be1524a164d7ac4f59b0ac)
+        ;
+
+        
+    
+    
+            marker_c2a11ff617f8a5b568567b93dbdefd45.bindTooltip(
+                `<div>
+                     Nottingham Forest FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c2a11ff617f8a5b568567b93dbdefd45.setIcon(icon_9a37dba5b223b8796ddbbdb9cc4292fb);
+            
+    
+            var marker_1e37fa5024f190a2ffd587bf526ba438 = L.marker(
+                [51.50853, -0.12574],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_e148c9ba2a201c12aaeb65549ad0a1f2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1f4929a80e80336f073be9c7c2098e0f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1882794ca7ffcf80bdb6a0346c83ee48 = $(`<div id="html_1882794ca7ffcf80bdb6a0346c83ee48" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Fulham FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 51.5085, -0.1257     </div>     </div>`)[0];
+                popup_1f4929a80e80336f073be9c7c2098e0f.setContent(html_1882794ca7ffcf80bdb6a0346c83ee48);
+            
+        
+
+        marker_1e37fa5024f190a2ffd587bf526ba438.bindPopup(popup_1f4929a80e80336f073be9c7c2098e0f)
+        ;
+
+        
+    
+    
+            marker_1e37fa5024f190a2ffd587bf526ba438.bindTooltip(
+                `<div>
+                     Fulham FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1e37fa5024f190a2ffd587bf526ba438.setIcon(icon_e148c9ba2a201c12aaeb65549ad0a1f2);
+            
+    
+            var marker_32dfd1cccf9cd043fc2579888c437a16 = L.marker(
+                [53.41058, -2.97794],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_7e0fc40d141ddd68ce43aec5955e7e5f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dfcfaa17e0b6887b7ff0e0b70e6f6214 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5621ad2f17b92f0ec83e60f9044f91be = $(`<div id="html_5621ad2f17b92f0ec83e60f9044f91be" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Liverpool FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 53.4106, -2.9779     </div>     </div>`)[0];
+                popup_dfcfaa17e0b6887b7ff0e0b70e6f6214.setContent(html_5621ad2f17b92f0ec83e60f9044f91be);
+            
+        
+
+        marker_32dfd1cccf9cd043fc2579888c437a16.bindPopup(popup_dfcfaa17e0b6887b7ff0e0b70e6f6214)
+        ;
+
+        
+    
+    
+            marker_32dfd1cccf9cd043fc2579888c437a16.bindTooltip(
+                `<div>
+                     Liverpool FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_32dfd1cccf9cd043fc2579888c437a16.setIcon(icon_7e0fc40d141ddd68ce43aec5955e7e5f);
+            
+    
+            var marker_c596e3888d6feb1f2ce3bba29be9e02c = L.marker(
+                [52.58547, -2.12296],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_c98064c2cb998bddbf06a6bece9b0a8e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_630637e482597e4257e4b0f14188909e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c211ebbc85c98db7e84bb407b7186cdb = $(`<div id="html_c211ebbc85c98db7e84bb407b7186cdb" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Wolverhampton Wanderers FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 52.5855, -2.1230     </div>     </div>`)[0];
+                popup_630637e482597e4257e4b0f14188909e.setContent(html_c211ebbc85c98db7e84bb407b7186cdb);
+            
+        
+
+        marker_c596e3888d6feb1f2ce3bba29be9e02c.bindPopup(popup_630637e482597e4257e4b0f14188909e)
+        ;
+
+        
+    
+    
+            marker_c596e3888d6feb1f2ce3bba29be9e02c.bindTooltip(
+                `<div>
+                     Wolverhampton Wanderers FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c596e3888d6feb1f2ce3bba29be9e02c.setIcon(icon_c98064c2cb998bddbf06a6bece9b0a8e);
+            
+    
+            var marker_2c8cf3bbd00904e65347e4b8e4c851f3 = L.marker(
+                [51.50853, -0.12574],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_dcf28c27af5a049fbb010a10c8e8b812 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1319d86538f3b4907d801e16dc9678cf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_28847ff899ecdab1f798a91b2cf59da4 = $(`<div id="html_28847ff899ecdab1f798a91b2cf59da4" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Tottenham Hotspur FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 51.5085, -0.1257     </div>     </div>`)[0];
+                popup_1319d86538f3b4907d801e16dc9678cf.setContent(html_28847ff899ecdab1f798a91b2cf59da4);
+            
+        
+
+        marker_2c8cf3bbd00904e65347e4b8e4c851f3.bindPopup(popup_1319d86538f3b4907d801e16dc9678cf)
+        ;
+
+        
+    
+    
+            marker_2c8cf3bbd00904e65347e4b8e4c851f3.bindTooltip(
+                `<div>
+                     Tottenham Hotspur FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2c8cf3bbd00904e65347e4b8e4c851f3.setIcon(icon_dcf28c27af5a049fbb010a10c8e8b812);
+            
+    
+            var marker_ebeba557d54c413948ce4c1a3e14507c = L.marker(
+                [53.48095, -2.23743],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_64d4e45b72d94f3dba725cba6b389634 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c8919582c6e6ef632157d43519718160 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7929fcc54cdb61b4ef21f7a79b173041 = $(`<div id="html_7929fcc54cdb61b4ef21f7a79b173041" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Manchester City FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 53.4809, -2.2374     </div>     </div>`)[0];
+                popup_c8919582c6e6ef632157d43519718160.setContent(html_7929fcc54cdb61b4ef21f7a79b173041);
+            
+        
+
+        marker_ebeba557d54c413948ce4c1a3e14507c.bindPopup(popup_c8919582c6e6ef632157d43519718160)
+        ;
+
+        
+    
+    
+            marker_ebeba557d54c413948ce4c1a3e14507c.bindTooltip(
+                `<div>
+                     Manchester City FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ebeba557d54c413948ce4c1a3e14507c.setIcon(icon_64d4e45b72d94f3dba725cba6b389634);
+            
+    
+            var marker_a2167f0fd938332704a6f84fa564d80e = L.marker(
+                [52.48142, -1.89983],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_c5cab2808b26e4de34ccae07207dc87d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_10078a6d85f0a13f8699e3ea90f05c78 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0e864e6e331d37c38749ff7d5665a7bd = $(`<div id="html_0e864e6e331d37c38749ff7d5665a7bd" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Aston Villa FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 52.4814, -1.8998     </div>     </div>`)[0];
+                popup_10078a6d85f0a13f8699e3ea90f05c78.setContent(html_0e864e6e331d37c38749ff7d5665a7bd);
+            
+        
+
+        marker_a2167f0fd938332704a6f84fa564d80e.bindPopup(popup_10078a6d85f0a13f8699e3ea90f05c78)
+        ;
+
+        
+    
+    
+            marker_a2167f0fd938332704a6f84fa564d80e.bindTooltip(
+                `<div>
+                     Aston Villa FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a2167f0fd938332704a6f84fa564d80e.setIcon(icon_c5cab2808b26e4de34ccae07207dc87d);
+            
+    
+            var marker_d3367bded53acdae3850b2d13206f1ad = L.marker(
+                [51.50853, -0.12574],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_96e0e2557e97355c85c7d0c8951ad0be = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_430edb598a612c1002f83a58b21302b9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a9041276d75c8d7d1a301320eb93eb2b = $(`<div id="html_a9041276d75c8d7d1a301320eb93eb2b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>West Ham United FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 51.5085, -0.1257     </div>     </div>`)[0];
+                popup_430edb598a612c1002f83a58b21302b9.setContent(html_a9041276d75c8d7d1a301320eb93eb2b);
+            
+        
+
+        marker_d3367bded53acdae3850b2d13206f1ad.bindPopup(popup_430edb598a612c1002f83a58b21302b9)
+        ;
+
+        
+    
+    
+            marker_d3367bded53acdae3850b2d13206f1ad.bindTooltip(
+                `<div>
+                     West Ham United FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d3367bded53acdae3850b2d13206f1ad.setIcon(icon_96e0e2557e97355c85c7d0c8951ad0be);
+            
+    
+            var marker_41de9fb8ede5bf19f21dbbe253c6f554 = L.marker(
+                [51.50853, -0.12574],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_4244ab4e5de0544b7dcd0065171a283f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc189c083065a33aad29ac1bf48502a5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_71a335e6b722253663c15331e43ee36f = $(`<div id="html_71a335e6b722253663c15331e43ee36f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Crystal Palace FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 51.5085, -0.1257     </div>     </div>`)[0];
+                popup_dc189c083065a33aad29ac1bf48502a5.setContent(html_71a335e6b722253663c15331e43ee36f);
+            
+        
+
+        marker_41de9fb8ede5bf19f21dbbe253c6f554.bindPopup(popup_dc189c083065a33aad29ac1bf48502a5)
+        ;
+
+        
+    
+    
+            marker_41de9fb8ede5bf19f21dbbe253c6f554.bindTooltip(
+                `<div>
+                     Crystal Palace FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_41de9fb8ede5bf19f21dbbe253c6f554.setIcon(icon_4244ab4e5de0544b7dcd0065171a283f);
+            
+    
+            var marker_10782c7a6303ccf17c86ab77805960c9 = L.marker(
+                [51.87967, -0.41748],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_cd765eb7d4e1ec0190b8a7c6abea9019 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a41c87ef1f68ff1f06b2870b0c0fb477 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6d1ccb02fbd24ecba19e89ec6bb0e39a = $(`<div id="html_6d1ccb02fbd24ecba19e89ec6bb0e39a" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Luton Town FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 51.8797, -0.4175     </div>     </div>`)[0];
+                popup_a41c87ef1f68ff1f06b2870b0c0fb477.setContent(html_6d1ccb02fbd24ecba19e89ec6bb0e39a);
+            
+        
+
+        marker_10782c7a6303ccf17c86ab77805960c9.bindPopup(popup_a41c87ef1f68ff1f06b2870b0c0fb477)
+        ;
+
+        
+    
+    
+            marker_10782c7a6303ccf17c86ab77805960c9.bindTooltip(
+                `<div>
+                     Luton Town FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_10782c7a6303ccf17c86ab77805960c9.setIcon(icon_cd765eb7d4e1ec0190b8a7c6abea9019);
+            
+    
+            var marker_9a86cabe9e23728b786e9594f7434f18 = L.marker(
+                [52.05917, 1.15545],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_2e7f14eff71679425efa7d3fd6a2ab16 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_80f8b6cf7e8ce0aa8d0cba8da56e10d0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e10a0129c0bbd56315d8e4a9a4e1c5c8 = $(`<div id="html_e10a0129c0bbd56315d8e4a9a4e1c5c8" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Ipswich Town FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 52.0592, 1.1555     </div>     </div>`)[0];
+                popup_80f8b6cf7e8ce0aa8d0cba8da56e10d0.setContent(html_e10a0129c0bbd56315d8e4a9a4e1c5c8);
+            
+        
+
+        marker_9a86cabe9e23728b786e9594f7434f18.bindPopup(popup_80f8b6cf7e8ce0aa8d0cba8da56e10d0)
+        ;
+
+        
+    
+    
+            marker_9a86cabe9e23728b786e9594f7434f18.bindTooltip(
+                `<div>
+                     Ipswich Town FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9a86cabe9e23728b786e9594f7434f18.setIcon(icon_2e7f14eff71679425efa7d3fd6a2ab16);
+            
+    
+            var marker_88fb7f395da5a7e72be3af06175b67e1 = L.marker(
+                [52.6386, -1.13169],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_e1cfda8774367e242f82c36c2c251903 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d314a5e065227d9c373298695f204968 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d7609c32b2306d4732773a5227192c0f = $(`<div id="html_d7609c32b2306d4732773a5227192c0f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Leicester City FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 52.6386, -1.1317     </div>     </div>`)[0];
+                popup_d314a5e065227d9c373298695f204968.setContent(html_d7609c32b2306d4732773a5227192c0f);
+            
+        
+
+        marker_88fb7f395da5a7e72be3af06175b67e1.bindPopup(popup_d314a5e065227d9c373298695f204968)
+        ;
+
+        
+    
+    
+            marker_88fb7f395da5a7e72be3af06175b67e1.bindTooltip(
+                `<div>
+                     Leicester City FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_88fb7f395da5a7e72be3af06175b67e1.setIcon(icon_e1cfda8774367e242f82c36c2c251903);
+            
+    
+            var marker_f8fd565c3f15baf8355658870ab54ee1 = L.marker(
+                [50.90395, -1.40428],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_13b98f19eb7b2ada1ec2cece1402634a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c07f188e3058a8e95df2cf15df8ccd3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b350bed2084f3e252a5de96c63e739f1 = $(`<div id="html_b350bed2084f3e252a5de96c63e739f1" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Southampton FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 50.9040, -1.4043     </div>     </div>`)[0];
+                popup_7c07f188e3058a8e95df2cf15df8ccd3.setContent(html_b350bed2084f3e252a5de96c63e739f1);
+            
+        
+
+        marker_f8fd565c3f15baf8355658870ab54ee1.bindPopup(popup_7c07f188e3058a8e95df2cf15df8ccd3)
+        ;
+
+        
+    
+    
+            marker_f8fd565c3f15baf8355658870ab54ee1.bindTooltip(
+                `<div>
+                     Southampton FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f8fd565c3f15baf8355658870ab54ee1.setIcon(icon_13b98f19eb7b2ada1ec2cece1402634a);
+            
+    
+            var marker_d8670342f6647f9373ffbd9bba0abbd8 = L.marker(
+                [54.90465, -1.38222],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_c0bb6d88964d9c5a46e1480874b2a21d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0333a9103b6c65a67faa9105b582e6c5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c7955511c1d341431db27e1c4b9138e4 = $(`<div id="html_c7955511c1d341431db27e1c4b9138e4" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Sunderland AFC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 54.9046, -1.3822     </div>     </div>`)[0];
+                popup_0333a9103b6c65a67faa9105b582e6c5.setContent(html_c7955511c1d341431db27e1c4b9138e4);
+            
+        
+
+        marker_d8670342f6647f9373ffbd9bba0abbd8.bindPopup(popup_0333a9103b6c65a67faa9105b582e6c5)
+        ;
+
+        
+    
+    
+            marker_d8670342f6647f9373ffbd9bba0abbd8.bindTooltip(
+                `<div>
+                     Sunderland AFC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d8670342f6647f9373ffbd9bba0abbd8.setIcon(icon_c0bb6d88964d9c5a46e1480874b2a21d);
+            
+    
+            var marker_cd8d6d21c4d0f6dbef05da98f46b4986 = L.marker(
+                [53.79648, -1.54785],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_ffb252525f92e744faa3f5cf645655a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_faa9e4cd90cef394dc958258cded0697 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_39a7421d73e4648e022a844881f203cc = $(`<div id="html_39a7421d73e4648e022a844881f203cc" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Leeds United FC</b><br>         <b>Liga:</b> Premier League<br>         <b>Koordinaten:</b> 53.7965, -1.5478     </div>     </div>`)[0];
+                popup_faa9e4cd90cef394dc958258cded0697.setContent(html_39a7421d73e4648e022a844881f203cc);
+            
+        
+
+        marker_cd8d6d21c4d0f6dbef05da98f46b4986.bindPopup(popup_faa9e4cd90cef394dc958258cded0697)
+        ;
+
+        
+    
+    
+            marker_cd8d6d21c4d0f6dbef05da98f46b4986.bindTooltip(
+                `<div>
+                     Leeds United FC (Premier League)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cd8d6d21c4d0f6dbef05da98f46b4986.setIcon(icon_ffb252525f92e744faa3f5cf645655a1);
+            
+    
+            var marker_09807f5b4f6c50a196e55726a1e646ac = L.marker(
+                [53.07582, 8.80717],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_874387f7016d0fd7cc09137b2509705f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_93df3a3e46cbcab8b30fe994863c01b8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ad54730862a9f18147c3f53b813454c9 = $(`<div id="html_ad54730862a9f18147c3f53b813454c9" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>SV Werder Bremen</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 53.0758, 8.8072     </div>     </div>`)[0];
+                popup_93df3a3e46cbcab8b30fe994863c01b8.setContent(html_ad54730862a9f18147c3f53b813454c9);
+            
+        
+
+        marker_09807f5b4f6c50a196e55726a1e646ac.bindPopup(popup_93df3a3e46cbcab8b30fe994863c01b8)
+        ;
+
+        
+    
+    
+            marker_09807f5b4f6c50a196e55726a1e646ac.bindTooltip(
+                `<div>
+                     SV Werder Bremen (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_09807f5b4f6c50a196e55726a1e646ac.setIcon(icon_874387f7016d0fd7cc09137b2509705f);
+            
+    
+            var marker_80d0880874b2dea5e3165710a7c2af83 = L.marker(
+                [51.0303, 6.98432],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_8f294b49e377f6dd6efbbfb016a7ba9d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_19751f5d074c28c2e6028e9b7fca5b1e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b9ef349100b1dfbcb034b7633bf2beea = $(`<div id="html_b9ef349100b1dfbcb034b7633bf2beea" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Bayer 04 Leverkusen</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 51.0303, 6.9843     </div>     </div>`)[0];
+                popup_19751f5d074c28c2e6028e9b7fca5b1e.setContent(html_b9ef349100b1dfbcb034b7633bf2beea);
+            
+        
+
+        marker_80d0880874b2dea5e3165710a7c2af83.bindPopup(popup_19751f5d074c28c2e6028e9b7fca5b1e)
+        ;
+
+        
+    
+    
+            marker_80d0880874b2dea5e3165710a7c2af83.bindTooltip(
+                `<div>
+                     Bayer 04 Leverkusen (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_80d0880874b2dea5e3165710a7c2af83.setIcon(icon_8f294b49e377f6dd6efbbfb016a7ba9d);
+            
+    
+            var marker_2cb50fcbbee314b706cdc6d211a0735c = L.marker(
+                [52.4236, 10.77597],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_2d506950c7b8c6d850965385d1185ae1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9836466c42e6f273706249b04b25d19c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_027a436d3129e85e1e0e74b647f84f9c = $(`<div id="html_027a436d3129e85e1e0e74b647f84f9c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>VfL Wolfsburg</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 52.4236, 10.7760     </div>     </div>`)[0];
+                popup_9836466c42e6f273706249b04b25d19c.setContent(html_027a436d3129e85e1e0e74b647f84f9c);
+            
+        
+
+        marker_2cb50fcbbee314b706cdc6d211a0735c.bindPopup(popup_9836466c42e6f273706249b04b25d19c)
+        ;
+
+        
+    
+    
+            marker_2cb50fcbbee314b706cdc6d211a0735c.bindTooltip(
+                `<div>
+                     VfL Wolfsburg (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2cb50fcbbee314b706cdc6d211a0735c.setIcon(icon_2d506950c7b8c6d850965385d1185ae1);
+            
+    
+            var marker_cfb7bb0e63fcba7a13e0fe8886f00774 = L.marker(
+                [49.2529, 8.87867],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_0928d5b4c693a343d3d51ee626e0dfbc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1696ba4d751a034ad245e117e5ac856b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2e362173d7fbc31b07f009b0ccecb3fa = $(`<div id="html_2e362173d7fbc31b07f009b0ccecb3fa" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>TSG 1899 Hoffenheim</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 49.2529, 8.8787     </div>     </div>`)[0];
+                popup_1696ba4d751a034ad245e117e5ac856b.setContent(html_2e362173d7fbc31b07f009b0ccecb3fa);
+            
+        
+
+        marker_cfb7bb0e63fcba7a13e0fe8886f00774.bindPopup(popup_1696ba4d751a034ad245e117e5ac856b)
+        ;
+
+        
+    
+    
+            marker_cfb7bb0e63fcba7a13e0fe8886f00774.bindTooltip(
+                `<div>
+                     TSG 1899 Hoffenheim (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cfb7bb0e63fcba7a13e0fe8886f00774.setIcon(icon_0928d5b4c693a343d3d51ee626e0dfbc);
+            
+    
+            var marker_f1f3fe8cb41f413cf6aa2f9b0e111474 = L.marker(
+                [48.37154, 10.89851],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_792d984f21500426dca1a295e646ce74 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2643ade70033754b17d9d281d89d6f2c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c9983dd298586c718ce18743a208e354 = $(`<div id="html_c9983dd298586c718ce18743a208e354" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>FC Augsburg</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 48.3715, 10.8985     </div>     </div>`)[0];
+                popup_2643ade70033754b17d9d281d89d6f2c.setContent(html_c9983dd298586c718ce18743a208e354);
+            
+        
+
+        marker_f1f3fe8cb41f413cf6aa2f9b0e111474.bindPopup(popup_2643ade70033754b17d9d281d89d6f2c)
+        ;
+
+        
+    
+    
+            marker_f1f3fe8cb41f413cf6aa2f9b0e111474.bindTooltip(
+                `<div>
+                     FC Augsburg (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f1f3fe8cb41f413cf6aa2f9b0e111474.setIcon(icon_792d984f21500426dca1a295e646ce74);
+            
+    
+            var marker_95bd074113930499556ba9e30f9e8259 = L.marker(
+                [48.78232, 9.17702],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_dc20108c30e75285d134bc1bf21cc865 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_60759404e31670e8577e11db338c5478 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_436ff1e948dc28ae619b6ba0d8da9f44 = $(`<div id="html_436ff1e948dc28ae619b6ba0d8da9f44" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>VfB Stuttgart</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 48.7823, 9.1770     </div>     </div>`)[0];
+                popup_60759404e31670e8577e11db338c5478.setContent(html_436ff1e948dc28ae619b6ba0d8da9f44);
+            
+        
+
+        marker_95bd074113930499556ba9e30f9e8259.bindPopup(popup_60759404e31670e8577e11db338c5478)
+        ;
+
+        
+    
+    
+            marker_95bd074113930499556ba9e30f9e8259.bindTooltip(
+                `<div>
+                     VfB Stuttgart (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_95bd074113930499556ba9e30f9e8259.setIcon(icon_dc20108c30e75285d134bc1bf21cc865);
+            
+    
+            var marker_9048fd5435ab8f0114cc01ed9837c979 = L.marker(
+                [51.51494, 7.466],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_fe4b513e54356d9db5abe6e0acdc5131 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ed92ad255e22bdd987b1fa45d9a7b38 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_deff66539016cecd3467fe87a7ee2691 = $(`<div id="html_deff66539016cecd3467fe87a7ee2691" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Borussia Dortmund</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 51.5149, 7.4660     </div>     </div>`)[0];
+                popup_3ed92ad255e22bdd987b1fa45d9a7b38.setContent(html_deff66539016cecd3467fe87a7ee2691);
+            
+        
+
+        marker_9048fd5435ab8f0114cc01ed9837c979.bindPopup(popup_3ed92ad255e22bdd987b1fa45d9a7b38)
+        ;
+
+        
+    
+    
+            marker_9048fd5435ab8f0114cc01ed9837c979.bindTooltip(
+                `<div>
+                     Borussia Dortmund (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9048fd5435ab8f0114cc01ed9837c979.setIcon(icon_fe4b513e54356d9db5abe6e0acdc5131);
+            
+    
+            var marker_38ec9d7be9a2af25225fc3ee386b3e41 = L.marker(
+                [52.52437, 13.41053],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_345ec10c4a0c10cfe62d19722c6948fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c4c67f67d402b7bacc04e52642ebbc84 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a56dfaf283aaff05f6a6af6f3ac4b031 = $(`<div id="html_a56dfaf283aaff05f6a6af6f3ac4b031" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>1. FC Union Berlin</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 52.5244, 13.4105     </div>     </div>`)[0];
+                popup_c4c67f67d402b7bacc04e52642ebbc84.setContent(html_a56dfaf283aaff05f6a6af6f3ac4b031);
+            
+        
+
+        marker_38ec9d7be9a2af25225fc3ee386b3e41.bindPopup(popup_c4c67f67d402b7bacc04e52642ebbc84)
+        ;
+
+        
+    
+    
+            marker_38ec9d7be9a2af25225fc3ee386b3e41.bindTooltip(
+                `<div>
+                     1. FC Union Berlin (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_38ec9d7be9a2af25225fc3ee386b3e41.setIcon(icon_345ec10c4a0c10cfe62d19722c6948fe);
+            
+    
+            var marker_f88ce5e41a3cd5b67a68ab29918efa8c = L.marker(
+                [50.11552, 8.68417],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_277ad1f6c3591b9e4904255fab73a88f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dca18b0c5d44a67c60a77dc8cc0b5474 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_576ea80455ef605f9314abd39fb85184 = $(`<div id="html_576ea80455ef605f9314abd39fb85184" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Eintracht Frankfurt</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 50.1155, 8.6842     </div>     </div>`)[0];
+                popup_dca18b0c5d44a67c60a77dc8cc0b5474.setContent(html_576ea80455ef605f9314abd39fb85184);
+            
+        
+
+        marker_f88ce5e41a3cd5b67a68ab29918efa8c.bindPopup(popup_dca18b0c5d44a67c60a77dc8cc0b5474)
+        ;
+
+        
+    
+    
+            marker_f88ce5e41a3cd5b67a68ab29918efa8c.bindTooltip(
+                `<div>
+                     Eintracht Frankfurt (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f88ce5e41a3cd5b67a68ab29918efa8c.setIcon(icon_277ad1f6c3591b9e4904255fab73a88f);
+            
+    
+            var marker_47e1a473a7ea4cbe93a906c8bedb7fc7 = L.marker(
+                [51.33962, 12.37129],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_f68c63ceb58fdbba157adfaf7a329d21 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f4de14db4a8ac7a455ee220f9b91282 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_43d9322b183839fcbd5dfd57f4a02d23 = $(`<div id="html_43d9322b183839fcbd5dfd57f4a02d23" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>RB Leipzig</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 51.3396, 12.3713     </div>     </div>`)[0];
+                popup_8f4de14db4a8ac7a455ee220f9b91282.setContent(html_43d9322b183839fcbd5dfd57f4a02d23);
+            
+        
+
+        marker_47e1a473a7ea4cbe93a906c8bedb7fc7.bindPopup(popup_8f4de14db4a8ac7a455ee220f9b91282)
+        ;
+
+        
+    
+    
+            marker_47e1a473a7ea4cbe93a906c8bedb7fc7.bindTooltip(
+                `<div>
+                     RB Leipzig (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_47e1a473a7ea4cbe93a906c8bedb7fc7.setIcon(icon_f68c63ceb58fdbba157adfaf7a329d21);
+            
+    
+            var marker_9ab51faa44462737ae8c8e5e80446d09 = L.marker(
+                [47.9959, 7.85222],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_a5c4b522d8eef60d63dfa94aa064586d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_df57d300680f0d30549675e9fa465004 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_77ecccd23d5f9071355fbedb63d3152f = $(`<div id="html_77ecccd23d5f9071355fbedb63d3152f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>SC Freiburg</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 47.9959, 7.8522     </div>     </div>`)[0];
+                popup_df57d300680f0d30549675e9fa465004.setContent(html_77ecccd23d5f9071355fbedb63d3152f);
+            
+        
+
+        marker_9ab51faa44462737ae8c8e5e80446d09.bindPopup(popup_df57d300680f0d30549675e9fa465004)
+        ;
+
+        
+    
+    
+            marker_9ab51faa44462737ae8c8e5e80446d09.bindTooltip(
+                `<div>
+                     SC Freiburg (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9ab51faa44462737ae8c8e5e80446d09.setIcon(icon_a5c4b522d8eef60d63dfa94aa064586d);
+            
+    
+            var marker_492f93d22967a6649e87c62cd6006bf0 = L.marker(
+                [50.93333, 6.95],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_cdd5d4686be2044cf87386094a3dda56 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_871c68805c3ab32c1c0d98be19aca3bb = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_08c94e6fb7f10f527ed50ed8351e61dc = $(`<div id="html_08c94e6fb7f10f527ed50ed8351e61dc" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>1. FC Köln</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 50.9333, 6.9500     </div>     </div>`)[0];
+                popup_871c68805c3ab32c1c0d98be19aca3bb.setContent(html_08c94e6fb7f10f527ed50ed8351e61dc);
+            
+        
+
+        marker_492f93d22967a6649e87c62cd6006bf0.bindPopup(popup_871c68805c3ab32c1c0d98be19aca3bb)
+        ;
+
+        
+    
+    
+            marker_492f93d22967a6649e87c62cd6006bf0.bindTooltip(
+                `<div>
+                     1. FC Köln (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_492f93d22967a6649e87c62cd6006bf0.setIcon(icon_cdd5d4686be2044cf87386094a3dda56);
+            
+    
+            var marker_bd67639fc0f54f73547bd705307565a1 = L.marker(
+                [51.48165, 7.21648],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_9b1ad7b078289777630632b995d8ab8e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a3e3f81f99747451bbf13902ae6cb31 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bcaa1f7bc9d9b37c5b8a5eaf0525c691 = $(`<div id="html_bcaa1f7bc9d9b37c5b8a5eaf0525c691" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>VfL Bochum 1848</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 51.4817, 7.2165     </div>     </div>`)[0];
+                popup_3a3e3f81f99747451bbf13902ae6cb31.setContent(html_bcaa1f7bc9d9b37c5b8a5eaf0525c691);
+            
+        
+
+        marker_bd67639fc0f54f73547bd705307565a1.bindPopup(popup_3a3e3f81f99747451bbf13902ae6cb31)
+        ;
+
+        
+    
+    
+            marker_bd67639fc0f54f73547bd705307565a1.bindTooltip(
+                `<div>
+                     VfL Bochum 1848 (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bd67639fc0f54f73547bd705307565a1.setIcon(icon_9b1ad7b078289777630632b995d8ab8e);
+            
+    
+            var marker_ab90d0947f5e2522f679cf2571714148 = L.marker(
+                [48.67798, 10.15162],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_bfd727a901e06187f9018ac518b5f868 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5a4159fbbaf32c8ba347425a0e27311e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e11fa892f76e6ad6a8745748f1061841 = $(`<div id="html_e11fa892f76e6ad6a8745748f1061841" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>1. FC Heidenheim 1846</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 48.6780, 10.1516     </div>     </div>`)[0];
+                popup_5a4159fbbaf32c8ba347425a0e27311e.setContent(html_e11fa892f76e6ad6a8745748f1061841);
+            
+        
+
+        marker_ab90d0947f5e2522f679cf2571714148.bindPopup(popup_5a4159fbbaf32c8ba347425a0e27311e)
+        ;
+
+        
+    
+    
+            marker_ab90d0947f5e2522f679cf2571714148.bindTooltip(
+                `<div>
+                     1. FC Heidenheim 1846 (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ab90d0947f5e2522f679cf2571714148.setIcon(icon_bfd727a901e06187f9018ac518b5f868);
+            
+    
+            var marker_e7f1ac4f2d626a05c08b6b477ac85c90 = L.marker(
+                [49.87167, 8.65027],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_1e90896151c2be718deb1459ab97f423 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3d21d2cf2f86a7c9ff26e0fe0388c9d9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8c96098739031f4cb1e41f9177961450 = $(`<div id="html_8c96098739031f4cb1e41f9177961450" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>SV Darmstadt 98</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 49.8717, 8.6503     </div>     </div>`)[0];
+                popup_3d21d2cf2f86a7c9ff26e0fe0388c9d9.setContent(html_8c96098739031f4cb1e41f9177961450);
+            
+        
+
+        marker_e7f1ac4f2d626a05c08b6b477ac85c90.bindPopup(popup_3d21d2cf2f86a7c9ff26e0fe0388c9d9)
+        ;
+
+        
+    
+    
+            marker_e7f1ac4f2d626a05c08b6b477ac85c90.bindTooltip(
+                `<div>
+                     SV Darmstadt 98 (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e7f1ac4f2d626a05c08b6b477ac85c90.setIcon(icon_1e90896151c2be718deb1459ab97f423);
+            
+    
+            var marker_5cd82714147dfff293562a498e511111 = L.marker(
+                [51.18539, 6.44172],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_2394db35682b0acf542d6ef3116196a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_609a7293451c9f0e2bce719418cc5b15 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_28cfbcfe2d993aa6706cd58d61a9897d = $(`<div id="html_28cfbcfe2d993aa6706cd58d61a9897d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Borussia Mönchengladbach</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 51.1854, 6.4417     </div>     </div>`)[0];
+                popup_609a7293451c9f0e2bce719418cc5b15.setContent(html_28cfbcfe2d993aa6706cd58d61a9897d);
+            
+        
+
+        marker_5cd82714147dfff293562a498e511111.bindPopup(popup_609a7293451c9f0e2bce719418cc5b15)
+        ;
+
+        
+    
+    
+            marker_5cd82714147dfff293562a498e511111.bindTooltip(
+                `<div>
+                     Borussia Mönchengladbach (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5cd82714147dfff293562a498e511111.setIcon(icon_2394db35682b0acf542d6ef3116196a6);
+            
+    
+            var marker_cf7be157f8ed6b72b74e1bf47d94f8cf = L.marker(
+                [49.98185, 8.28008],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_349dc6928af1b1c7c75952524afcb263 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b5e9465c17681a078f9476507800f3b3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_eef106f0b73d58c20bbada72c8d3d8a3 = $(`<div id="html_eef106f0b73d58c20bbada72c8d3d8a3" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>1. FSV Mainz 05</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 49.9819, 8.2801     </div>     </div>`)[0];
+                popup_b5e9465c17681a078f9476507800f3b3.setContent(html_eef106f0b73d58c20bbada72c8d3d8a3);
+            
+        
+
+        marker_cf7be157f8ed6b72b74e1bf47d94f8cf.bindPopup(popup_b5e9465c17681a078f9476507800f3b3)
+        ;
+
+        
+    
+    
+            marker_cf7be157f8ed6b72b74e1bf47d94f8cf.bindTooltip(
+                `<div>
+                     1. FSV Mainz 05 (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cf7be157f8ed6b72b74e1bf47d94f8cf.setIcon(icon_349dc6928af1b1c7c75952524afcb263);
+            
+    
+            var marker_0575e33366a5240ef4a38d66d3ccc8ee = L.marker(
+                [48.13743, 11.57549],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_b1f8c05b03f2f1d007f8fa7ee30a94ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_27fcdaf15ff28275c58d34e93719b04d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dc27999e0bb5578edc660b52f2afee84 = $(`<div id="html_dc27999e0bb5578edc660b52f2afee84" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>FC Bayern München</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 48.1374, 11.5755     </div>     </div>`)[0];
+                popup_27fcdaf15ff28275c58d34e93719b04d.setContent(html_dc27999e0bb5578edc660b52f2afee84);
+            
+        
+
+        marker_0575e33366a5240ef4a38d66d3ccc8ee.bindPopup(popup_27fcdaf15ff28275c58d34e93719b04d)
+        ;
+
+        
+    
+    
+            marker_0575e33366a5240ef4a38d66d3ccc8ee.bindTooltip(
+                `<div>
+                     FC Bayern München (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0575e33366a5240ef4a38d66d3ccc8ee.setIcon(icon_b1f8c05b03f2f1d007f8fa7ee30a94ba);
+            
+    
+            var marker_bdedb54e6066e996e5ebdc4223ae4544 = L.marker(
+                [53.55073, 9.99302],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_89b90b6f622f21793ee5373b7f7bd1be = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cd138c9a20451dd56f3c53ffacc45b1a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b8ca31d3b6b16b28ad7321810a242d27 = $(`<div id="html_b8ca31d3b6b16b28ad7321810a242d27" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>FC St. Pauli 1910</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 53.5507, 9.9930     </div>     </div>`)[0];
+                popup_cd138c9a20451dd56f3c53ffacc45b1a.setContent(html_b8ca31d3b6b16b28ad7321810a242d27);
+            
+        
+
+        marker_bdedb54e6066e996e5ebdc4223ae4544.bindPopup(popup_cd138c9a20451dd56f3c53ffacc45b1a)
+        ;
+
+        
+    
+    
+            marker_bdedb54e6066e996e5ebdc4223ae4544.bindTooltip(
+                `<div>
+                     FC St. Pauli 1910 (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bdedb54e6066e996e5ebdc4223ae4544.setIcon(icon_89b90b6f622f21793ee5373b7f7bd1be);
+            
+    
+            var marker_d1da5ae86b2cb20857822c252213c822 = L.marker(
+                [54.32133, 10.13489],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_8347dc4fcd29cd50e665183822c59f87 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_657822f046c5e36410e78a43fc4231b1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_78787b26e4375be792422956b8e3032b = $(`<div id="html_78787b26e4375be792422956b8e3032b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Holstein Kiel</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 54.3213, 10.1349     </div>     </div>`)[0];
+                popup_657822f046c5e36410e78a43fc4231b1.setContent(html_78787b26e4375be792422956b8e3032b);
+            
+        
+
+        marker_d1da5ae86b2cb20857822c252213c822.bindPopup(popup_657822f046c5e36410e78a43fc4231b1)
+        ;
+
+        
+    
+    
+            marker_d1da5ae86b2cb20857822c252213c822.bindTooltip(
+                `<div>
+                     Holstein Kiel (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d1da5ae86b2cb20857822c252213c822.setIcon(icon_8347dc4fcd29cd50e665183822c59f87);
+            
+    
+            var marker_f53d4c4c50bc253d1cefd501c39a50d3 = L.marker(
+                [53.55073, 9.99302],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_5f75639bfc8acaed5a5ecf62cb2f8f14 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e2232790821d4ffd3d532e74531e9a24 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8ae4d521baa73deda4e7cf08f5272fa6 = $(`<div id="html_8ae4d521baa73deda4e7cf08f5272fa6" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Hamburger SV</b><br>         <b>Liga:</b> Bundesliga<br>         <b>Koordinaten:</b> 53.5507, 9.9930     </div>     </div>`)[0];
+                popup_e2232790821d4ffd3d532e74531e9a24.setContent(html_8ae4d521baa73deda4e7cf08f5272fa6);
+            
+        
+
+        marker_f53d4c4c50bc253d1cefd501c39a50d3.bindPopup(popup_e2232790821d4ffd3d532e74531e9a24)
+        ;
+
+        
+    
+    
+            marker_f53d4c4c50bc253d1cefd501c39a50d3.bindTooltip(
+                `<div>
+                     Hamburger SV (Bundesliga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f53d4c4c50bc253d1cefd501c39a50d3.setIcon(icon_5f75639bfc8acaed5a5ecf62cb2f8f14);
+            
+    
+            var marker_3905673ae3789707b7ca52e48809aa13 = L.marker(
+                [36.83814, -2.45974],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_e46bb8d414665de730d18528d583ffb2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f12a0864ca89cf2eb9afdafae696ec8c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_df58cb8d1cb726f3008ee3f0974cda0b = $(`<div id="html_df58cb8d1cb726f3008ee3f0974cda0b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>UD Almería</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 36.8381, -2.4597     </div>     </div>`)[0];
+                popup_f12a0864ca89cf2eb9afdafae696ec8c.setContent(html_df58cb8d1cb726f3008ee3f0974cda0b);
+            
+        
+
+        marker_3905673ae3789707b7ca52e48809aa13.bindPopup(popup_f12a0864ca89cf2eb9afdafae696ec8c)
+        ;
+
+        
+    
+    
+            marker_3905673ae3789707b7ca52e48809aa13.bindTooltip(
+                `<div>
+                     UD Almería (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3905673ae3789707b7ca52e48809aa13.setIcon(icon_e46bb8d414665de730d18528d583ffb2);
+            
+    
+            var marker_de50943724a13e75bc29b1221be0df9d = L.marker(
+                [37.38283, -5.97317],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_990045908dd3255af8bd0350191ed1cf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e68ef93e7d92e24d32d4375e0c7df048 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_db04d61af55d9c8641936116818056d0 = $(`<div id="html_db04d61af55d9c8641936116818056d0" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Sevilla FC</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 37.3828, -5.9732     </div>     </div>`)[0];
+                popup_e68ef93e7d92e24d32d4375e0c7df048.setContent(html_db04d61af55d9c8641936116818056d0);
+            
+        
+
+        marker_de50943724a13e75bc29b1221be0df9d.bindPopup(popup_e68ef93e7d92e24d32d4375e0c7df048)
+        ;
+
+        
+    
+    
+            marker_de50943724a13e75bc29b1221be0df9d.bindTooltip(
+                `<div>
+                     Sevilla FC (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_de50943724a13e75bc29b1221be0df9d.setIcon(icon_990045908dd3255af8bd0350191ed1cf);
+            
+    
+            var marker_879b1a20a1faa61634ccc9c6b99884f5 = L.marker(
+                [18.33662, -66.99018],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_d47dc6e1b449bb3adef75965c4d7264c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a86b8db9e6ae6e23b073bd982070c2a1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_122c5aaee61201aed651d2694f9d0461 = $(`<div id="html_122c5aaee61201aed651d2694f9d0461" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Real Sociedad de Fútbol</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 18.3366, -66.9902     </div>     </div>`)[0];
+                popup_a86b8db9e6ae6e23b073bd982070c2a1.setContent(html_122c5aaee61201aed651d2694f9d0461);
+            
+        
+
+        marker_879b1a20a1faa61634ccc9c6b99884f5.bindPopup(popup_a86b8db9e6ae6e23b073bd982070c2a1)
+        ;
+
+        
+    
+    
+            marker_879b1a20a1faa61634ccc9c6b99884f5.bindTooltip(
+                `<div>
+                     Real Sociedad de Fútbol (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_879b1a20a1faa61634ccc9c6b99884f5.setIcon(icon_d47dc6e1b449bb3adef75965c4d7264c);
+            
+    
+            var marker_c297bc6f6656fdd8f5f6c0c8b4e5f94f = L.marker(
+                [28.10178, -15.41573],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_c573ac23e1dbeb2059f747029a6a8fc8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0dde4b4a3ae764bcdf0da60a5771d5bf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0fbfab86e502ba5ed0a584677e3a99d7 = $(`<div id="html_0fbfab86e502ba5ed0a584677e3a99d7" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>UD Las Palmas</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 28.1018, -15.4157     </div>     </div>`)[0];
+                popup_0dde4b4a3ae764bcdf0da60a5771d5bf.setContent(html_0fbfab86e502ba5ed0a584677e3a99d7);
+            
+        
+
+        marker_c297bc6f6656fdd8f5f6c0c8b4e5f94f.bindPopup(popup_0dde4b4a3ae764bcdf0da60a5771d5bf)
+        ;
+
+        
+    
+    
+            marker_c297bc6f6656fdd8f5f6c0c8b4e5f94f.bindTooltip(
+                `<div>
+                     UD Las Palmas (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c297bc6f6656fdd8f5f6c0c8b4e5f94f.setIcon(icon_c573ac23e1dbeb2059f747029a6a8fc8);
+            
+    
+            var marker_1b1888c28b53f34c65d6d8b717a54496 = L.marker(
+                [43.26271, -2.92528],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_a6fcf7da27bc60252356cf330381220c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_51f38e1f97735d4c04d995538dfda189 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1a5cb7a410534dca6a41266cffa9cca1 = $(`<div id="html_1a5cb7a410534dca6a41266cffa9cca1" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Athletic Club</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 43.2627, -2.9253     </div>     </div>`)[0];
+                popup_51f38e1f97735d4c04d995538dfda189.setContent(html_1a5cb7a410534dca6a41266cffa9cca1);
+            
+        
+
+        marker_1b1888c28b53f34c65d6d8b717a54496.bindPopup(popup_51f38e1f97735d4c04d995538dfda189)
+        ;
+
+        
+    
+    
+            marker_1b1888c28b53f34c65d6d8b717a54496.bindTooltip(
+                `<div>
+                     Athletic Club (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1b1888c28b53f34c65d6d8b717a54496.setIcon(icon_a6fcf7da27bc60252356cf330381220c);
+            
+    
+            var marker_f1437217be654b5ba8aecfa65a17e8a3 = L.marker(
+                [42.23282, -8.72264],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_97b1eb25ff8ee8f0bcd8ef60435a3707 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_521962e57ca48dc95f7d8dcd58bc425a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c586abe89d67deaf231784bdfafdeaf9 = $(`<div id="html_c586abe89d67deaf231784bdfafdeaf9" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>RC Celta de Vigo</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 42.2328, -8.7226     </div>     </div>`)[0];
+                popup_521962e57ca48dc95f7d8dcd58bc425a.setContent(html_c586abe89d67deaf231784bdfafdeaf9);
+            
+        
+
+        marker_f1437217be654b5ba8aecfa65a17e8a3.bindPopup(popup_521962e57ca48dc95f7d8dcd58bc425a)
+        ;
+
+        
+    
+    
+            marker_f1437217be654b5ba8aecfa65a17e8a3.bindTooltip(
+                `<div>
+                     RC Celta de Vigo (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f1437217be654b5ba8aecfa65a17e8a3.setIcon(icon_97b1eb25ff8ee8f0bcd8ef60435a3707);
+            
+    
+            var marker_d002fe290d9e17ec9a5464ccbff4315d = L.marker(
+                [38.72572, -7.21533],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_48482545b6c3d7142dba02d8594062dd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_386bc39f038864fafbff238334c81158 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_487e216e51e052b01b2716c815aff48b = $(`<div id="html_487e216e51e052b01b2716c815aff48b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Villarreal CF</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 38.7257, -7.2153     </div>     </div>`)[0];
+                popup_386bc39f038864fafbff238334c81158.setContent(html_487e216e51e052b01b2716c815aff48b);
+            
+        
+
+        marker_d002fe290d9e17ec9a5464ccbff4315d.bindPopup(popup_386bc39f038864fafbff238334c81158)
+        ;
+
+        
+    
+    
+            marker_d002fe290d9e17ec9a5464ccbff4315d.bindTooltip(
+                `<div>
+                     Villarreal CF (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d002fe290d9e17ec9a5464ccbff4315d.setIcon(icon_48482545b6c3d7142dba02d8594062dd);
+            
+    
+            var marker_49be3582c4524ad8b2123289f36545d1 = L.marker(
+                [40.30571, -3.73295],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_a165456e4cbbc98f75b0f250db2d926d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5f4c49b8f423dfe0d5f4f17f44c94d5e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f302c57b6c30fa4257773f6460fb18e5 = $(`<div id="html_f302c57b6c30fa4257773f6460fb18e5" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Getafe CF</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 40.3057, -3.7330     </div>     </div>`)[0];
+                popup_5f4c49b8f423dfe0d5f4f17f44c94d5e.setContent(html_f302c57b6c30fa4257773f6460fb18e5);
+            
+        
+
+        marker_49be3582c4524ad8b2123289f36545d1.bindPopup(popup_5f4c49b8f423dfe0d5f4f17f44c94d5e)
+        ;
+
+        
+    
+    
+            marker_49be3582c4524ad8b2123289f36545d1.bindTooltip(
+                `<div>
+                     Getafe CF (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_49be3582c4524ad8b2123289f36545d1.setIcon(icon_a165456e4cbbc98f75b0f250db2d926d);
+            
+    
+            var marker_f65b6ef3d9fc151e159c4c078f4e1ea1 = L.marker(
+                [36.52672, -6.2891],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_6204007bdf2d836803c9159d08b0775b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_03939730a992be8ad780874c799cb9b0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8f7a1837bb84e679a6ed279088cc1841 = $(`<div id="html_8f7a1837bb84e679a6ed279088cc1841" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Cádiz CF</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 36.5267, -6.2891     </div>     </div>`)[0];
+                popup_03939730a992be8ad780874c799cb9b0.setContent(html_8f7a1837bb84e679a6ed279088cc1841);
+            
+        
+
+        marker_f65b6ef3d9fc151e159c4c078f4e1ea1.bindPopup(popup_03939730a992be8ad780874c799cb9b0)
+        ;
+
+        
+    
+    
+            marker_f65b6ef3d9fc151e159c4c078f4e1ea1.bindTooltip(
+                `<div>
+                     Cádiz CF (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f65b6ef3d9fc151e159c4c078f4e1ea1.setIcon(icon_6204007bdf2d836803c9159d08b0775b);
+            
+    
+            var marker_b2fc0d40c05b0d78a72da214e1e8b633 = L.marker(
+                [40.4165, -3.70256],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_cc915316d33e3a6091abe1c9d9334ba3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d64304ec809e4e4746f800dcf54e122 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4db053ea107ac65b17b4070c511b4969 = $(`<div id="html_4db053ea107ac65b17b4070c511b4969" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Club Atlético de Madrid</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 40.4165, -3.7026     </div>     </div>`)[0];
+                popup_2d64304ec809e4e4746f800dcf54e122.setContent(html_4db053ea107ac65b17b4070c511b4969);
+            
+        
+
+        marker_b2fc0d40c05b0d78a72da214e1e8b633.bindPopup(popup_2d64304ec809e4e4746f800dcf54e122)
+        ;
+
+        
+    
+    
+            marker_b2fc0d40c05b0d78a72da214e1e8b633.bindTooltip(
+                `<div>
+                     Club Atlético de Madrid (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b2fc0d40c05b0d78a72da214e1e8b633.setIcon(icon_cc915316d33e3a6091abe1c9d9334ba3);
+            
+    
+            var marker_af61b3bbba8c85be9bac23d210bb2cf3 = L.marker(
+                [18.71673, -91.66202],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_2d4100208c1df4eadb2a3c2cb2cd15fa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_070e5636f9983dd4c9b847fe224004c5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_859bdd6c1aeca3cefea819cb8e4f46a1 = $(`<div id="html_859bdd6c1aeca3cefea819cb8e4f46a1" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>RCD Mallorca</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 18.7167, -91.6620     </div>     </div>`)[0];
+                popup_070e5636f9983dd4c9b847fe224004c5.setContent(html_859bdd6c1aeca3cefea819cb8e4f46a1);
+            
+        
+
+        marker_af61b3bbba8c85be9bac23d210bb2cf3.bindPopup(popup_070e5636f9983dd4c9b847fe224004c5)
+        ;
+
+        
+    
+    
+            marker_af61b3bbba8c85be9bac23d210bb2cf3.bindTooltip(
+                `<div>
+                     RCD Mallorca (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_af61b3bbba8c85be9bac23d210bb2cf3.setIcon(icon_2d4100208c1df4eadb2a3c2cb2cd15fa);
+            
+    
+            var marker_b93159605d6a1c465b574fb155f48197 = L.marker(
+                [39.47391, -0.37966],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_e5516492d4333f54981199ae3793ad18 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_232d9d4a51e35dc0a302197130a162ed = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_09e1f9aed691ecbfc1dce16f89fb56f1 = $(`<div id="html_09e1f9aed691ecbfc1dce16f89fb56f1" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Valencia CF</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 39.4739, -0.3797     </div>     </div>`)[0];
+                popup_232d9d4a51e35dc0a302197130a162ed.setContent(html_09e1f9aed691ecbfc1dce16f89fb56f1);
+            
+        
+
+        marker_b93159605d6a1c465b574fb155f48197.bindPopup(popup_232d9d4a51e35dc0a302197130a162ed)
+        ;
+
+        
+    
+    
+            marker_b93159605d6a1c465b574fb155f48197.bindTooltip(
+                `<div>
+                     Valencia CF (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b93159605d6a1c465b574fb155f48197.setIcon(icon_e5516492d4333f54981199ae3793ad18);
+            
+    
+            var marker_b31728c3eedcbac5c25d5b629f58afb8 = L.marker(
+                [42.81687, -1.64323],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_60c4ab25e1acaf57f29f9de212e4d424 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4c9dbc7f1cb3cb4901099ab9cbaa14df = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a55b081be0e2c356b81429aca92a78ec = $(`<div id="html_a55b081be0e2c356b81429aca92a78ec" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>CA Osasuna</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 42.8169, -1.6432     </div>     </div>`)[0];
+                popup_4c9dbc7f1cb3cb4901099ab9cbaa14df.setContent(html_a55b081be0e2c356b81429aca92a78ec);
+            
+        
+
+        marker_b31728c3eedcbac5c25d5b629f58afb8.bindPopup(popup_4c9dbc7f1cb3cb4901099ab9cbaa14df)
+        ;
+
+        
+    
+    
+            marker_b31728c3eedcbac5c25d5b629f58afb8.bindTooltip(
+                `<div>
+                     CA Osasuna (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b31728c3eedcbac5c25d5b629f58afb8.setIcon(icon_60c4ab25e1acaf57f29f9de212e4d424);
+            
+    
+            var marker_e87b651ddcf1f523bbf17acad1bb9b25 = L.marker(
+                [41.98311, 2.82493],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_3d71b70401448b5fda6e61a1db360e15 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_91b18d083ef846a9522e8ef46841f89e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_41fa767f6e136d9b808afe4829c013ef = $(`<div id="html_41fa767f6e136d9b808afe4829c013ef" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Girona FC</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 41.9831, 2.8249     </div>     </div>`)[0];
+                popup_91b18d083ef846a9522e8ef46841f89e.setContent(html_41fa767f6e136d9b808afe4829c013ef);
+            
+        
+
+        marker_e87b651ddcf1f523bbf17acad1bb9b25.bindPopup(popup_91b18d083ef846a9522e8ef46841f89e)
+        ;
+
+        
+    
+    
+            marker_e87b651ddcf1f523bbf17acad1bb9b25.bindTooltip(
+                `<div>
+                     Girona FC (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e87b651ddcf1f523bbf17acad1bb9b25.setIcon(icon_3d71b70401448b5fda6e61a1db360e15);
+            
+    
+            var marker_b40d7dbeac5adee8fbd715d396d8c050 = L.marker(
+                [41.38879, 2.15899],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_1b5ec19fa6624392f23e4698ccea6a15 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8b99c99108156eab3b90a8cee83686b0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4c6d3a57d79c006be9e21b5be8388ae3 = $(`<div id="html_4c6d3a57d79c006be9e21b5be8388ae3" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>FC Barcelona</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 41.3888, 2.1590     </div>     </div>`)[0];
+                popup_8b99c99108156eab3b90a8cee83686b0.setContent(html_4c6d3a57d79c006be9e21b5be8388ae3);
+            
+        
+
+        marker_b40d7dbeac5adee8fbd715d396d8c050.bindPopup(popup_8b99c99108156eab3b90a8cee83686b0)
+        ;
+
+        
+    
+    
+            marker_b40d7dbeac5adee8fbd715d396d8c050.bindTooltip(
+                `<div>
+                     FC Barcelona (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b40d7dbeac5adee8fbd715d396d8c050.setIcon(icon_1b5ec19fa6624392f23e4698ccea6a15);
+            
+    
+            var marker_924577e1e0ec81d710bce3859c2eb5b7 = L.marker(
+                [37.38283, -5.97317],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_b4df1eb798b5342591e2755b5803c4c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d418fb7970eeeb66a47549fd429ec27 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a11820beb15cba9831ef583524435578 = $(`<div id="html_a11820beb15cba9831ef583524435578" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Real Betis Balompié</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 37.3828, -5.9732     </div>     </div>`)[0];
+                popup_2d418fb7970eeeb66a47549fd429ec27.setContent(html_a11820beb15cba9831ef583524435578);
+            
+        
+
+        marker_924577e1e0ec81d710bce3859c2eb5b7.bindPopup(popup_2d418fb7970eeeb66a47549fd429ec27)
+        ;
+
+        
+    
+    
+            marker_924577e1e0ec81d710bce3859c2eb5b7.bindTooltip(
+                `<div>
+                     Real Betis Balompié (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_924577e1e0ec81d710bce3859c2eb5b7.setIcon(icon_b4df1eb798b5342591e2755b5803c4c0);
+            
+    
+            var marker_0b73d5e69275c3c2476e3d2d8ba67e60 = L.marker(
+                [42.84998, -2.67268],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_4ec193fb37e21cac82f8bab726f19686 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_618ac5e1837a500a27902da4009678f2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d44169e72503ceba141acdf8fa5a411c = $(`<div id="html_d44169e72503ceba141acdf8fa5a411c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Deportivo Alavés</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 42.8500, -2.6727     </div>     </div>`)[0];
+                popup_618ac5e1837a500a27902da4009678f2.setContent(html_d44169e72503ceba141acdf8fa5a411c);
+            
+        
+
+        marker_0b73d5e69275c3c2476e3d2d8ba67e60.bindPopup(popup_618ac5e1837a500a27902da4009678f2)
+        ;
+
+        
+    
+    
+            marker_0b73d5e69275c3c2476e3d2d8ba67e60.bindTooltip(
+                `<div>
+                     Deportivo Alavés (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0b73d5e69275c3c2476e3d2d8ba67e60.setIcon(icon_4ec193fb37e21cac82f8bab726f19686);
+            
+    
+            var marker_dcd40a8fcd75cb24d08373a4fe4ec5e4 = L.marker(
+                [37.18817, -3.60667],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_9199f6f5398bacdc55bc59a557c42100 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_70371c4a8de9ed5380b86afcc1d1e7d0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_99927ca549259f0766e61d8a714f2134 = $(`<div id="html_99927ca549259f0766e61d8a714f2134" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Granada CF</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 37.1882, -3.6067     </div>     </div>`)[0];
+                popup_70371c4a8de9ed5380b86afcc1d1e7d0.setContent(html_99927ca549259f0766e61d8a714f2134);
+            
+        
+
+        marker_dcd40a8fcd75cb24d08373a4fe4ec5e4.bindPopup(popup_70371c4a8de9ed5380b86afcc1d1e7d0)
+        ;
+
+        
+    
+    
+            marker_dcd40a8fcd75cb24d08373a4fe4ec5e4.bindTooltip(
+                `<div>
+                     Granada CF (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dcd40a8fcd75cb24d08373a4fe4ec5e4.setIcon(icon_9199f6f5398bacdc55bc59a557c42100);
+            
+    
+            var marker_63eef20d72a0c8a60bf06fddf1539b0c = L.marker(
+                [40.4165, -3.70256],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_b4a57e7b07978dbfacf2a43255c50012 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_be6308a49a8f60cab15efe31fdc356b8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0b088ab208bfa8c9d46fd29aaf4b863c = $(`<div id="html_0b088ab208bfa8c9d46fd29aaf4b863c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Rayo Vallecano de Madrid</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 40.4165, -3.7026     </div>     </div>`)[0];
+                popup_be6308a49a8f60cab15efe31fdc356b8.setContent(html_0b088ab208bfa8c9d46fd29aaf4b863c);
+            
+        
+
+        marker_63eef20d72a0c8a60bf06fddf1539b0c.bindPopup(popup_be6308a49a8f60cab15efe31fdc356b8)
+        ;
+
+        
+    
+    
+            marker_63eef20d72a0c8a60bf06fddf1539b0c.bindTooltip(
+                `<div>
+                     Rayo Vallecano de Madrid (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_63eef20d72a0c8a60bf06fddf1539b0c.setIcon(icon_b4a57e7b07978dbfacf2a43255c50012);
+            
+    
+            var marker_acba1be96cab028d6c4de2c98ad291fd = L.marker(
+                [40.4165, -3.70256],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_aa8d4b12475be28d44827e2990f9b30f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_07490271fc55a2d3f825377412948715 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_567c92f34f55baed6d02f09c6517f545 = $(`<div id="html_567c92f34f55baed6d02f09c6517f545" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Real Madrid CF</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 40.4165, -3.7026     </div>     </div>`)[0];
+                popup_07490271fc55a2d3f825377412948715.setContent(html_567c92f34f55baed6d02f09c6517f545);
+            
+        
+
+        marker_acba1be96cab028d6c4de2c98ad291fd.bindPopup(popup_07490271fc55a2d3f825377412948715)
+        ;
+
+        
+    
+    
+            marker_acba1be96cab028d6c4de2c98ad291fd.bindTooltip(
+                `<div>
+                     Real Madrid CF (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_acba1be96cab028d6c4de2c98ad291fd.setIcon(icon_aa8d4b12475be28d44827e2990f9b30f);
+            
+    
+            var marker_31802c8ae249bff2d50b5dc1c19768b5 = L.marker(
+                [41.65541, -4.72353],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_965663b617f4dbd59b29720447798351 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0ccafb310cb561484129a32e663840c3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6438ee795f509fd0f86d1e8083aa2bd9 = $(`<div id="html_6438ee795f509fd0f86d1e8083aa2bd9" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Real Valladolid CF</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 41.6554, -4.7235     </div>     </div>`)[0];
+                popup_0ccafb310cb561484129a32e663840c3.setContent(html_6438ee795f509fd0f86d1e8083aa2bd9);
+            
+        
+
+        marker_31802c8ae249bff2d50b5dc1c19768b5.bindPopup(popup_0ccafb310cb561484129a32e663840c3)
+        ;
+
+        
+    
+    
+            marker_31802c8ae249bff2d50b5dc1c19768b5.bindTooltip(
+                `<div>
+                     Real Valladolid CF (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_31802c8ae249bff2d50b5dc1c19768b5.setIcon(icon_965663b617f4dbd59b29720447798351);
+            
+    
+            var marker_7aef50c50d6eac50dd5325f1d12f94e6 = L.marker(
+                [41.35, 2.08333],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_74c0cad0d834bf414a4cec4b499f62c9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3aace7975189edd1c4702a0c62b524c8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8ccbbb652ecd691a2defbce267185609 = $(`<div id="html_8ccbbb652ecd691a2defbce267185609" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>RCD Espanyol de Barcelona</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 41.3500, 2.0833     </div>     </div>`)[0];
+                popup_3aace7975189edd1c4702a0c62b524c8.setContent(html_8ccbbb652ecd691a2defbce267185609);
+            
+        
+
+        marker_7aef50c50d6eac50dd5325f1d12f94e6.bindPopup(popup_3aace7975189edd1c4702a0c62b524c8)
+        ;
+
+        
+    
+    
+            marker_7aef50c50d6eac50dd5325f1d12f94e6.bindTooltip(
+                `<div>
+                     RCD Espanyol de Barcelona (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7aef50c50d6eac50dd5325f1d12f94e6.setIcon(icon_74c0cad0d834bf414a4cec4b499f62c9);
+            
+    
+            var marker_edab895341a8fb199f2c688a9f59427d = L.marker(
+                [40.32718, -3.7635],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_6158d8151b4ab0bbf3107caa07ea2155 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a65256e285fa5fb5b284ce212505ab10 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b2c1922842e61fd483a72307bbc341cc = $(`<div id="html_b2c1922842e61fd483a72307bbc341cc" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>CD Leganés</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 40.3272, -3.7635     </div>     </div>`)[0];
+                popup_a65256e285fa5fb5b284ce212505ab10.setContent(html_b2c1922842e61fd483a72307bbc341cc);
+            
+        
+
+        marker_edab895341a8fb199f2c688a9f59427d.bindPopup(popup_a65256e285fa5fb5b284ce212505ab10)
+        ;
+
+        
+    
+    
+            marker_edab895341a8fb199f2c688a9f59427d.bindTooltip(
+                `<div>
+                     CD Leganés (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_edab895341a8fb199f2c688a9f59427d.setIcon(icon_6158d8151b4ab0bbf3107caa07ea2155);
+            
+    
+            var marker_465cc5180ce04d771284661dcb83bc4e = L.marker(
+                [38.26218, -0.70107],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_2280eda3df28e270e26170ee8753d1d5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_19cb0c36e549afbc0f1738a315a9bb84 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a07b196d7c89afec1d66b6ccc814fece = $(`<div id="html_a07b196d7c89afec1d66b6ccc814fece" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Elche CF</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 38.2622, -0.7011     </div>     </div>`)[0];
+                popup_19cb0c36e549afbc0f1738a315a9bb84.setContent(html_a07b196d7c89afec1d66b6ccc814fece);
+            
+        
+
+        marker_465cc5180ce04d771284661dcb83bc4e.bindPopup(popup_19cb0c36e549afbc0f1738a315a9bb84)
+        ;
+
+        
+    
+    
+            marker_465cc5180ce04d771284661dcb83bc4e.bindTooltip(
+                `<div>
+                     Elche CF (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_465cc5180ce04d771284661dcb83bc4e.setIcon(icon_2280eda3df28e270e26170ee8753d1d5);
+            
+    
+            var marker_5162a5a1c9615224d45a8f77b71b1d0f = L.marker(
+                [39.47391, -0.37966],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_70ef6ba3777e502d38b2f3ee4035c587 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3027c6e476dc01b9ed3313f1e53488df = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4e3823364f13adcba1e064db834b4a87 = $(`<div id="html_4e3823364f13adcba1e064db834b4a87" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Levante UD</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 39.4739, -0.3797     </div>     </div>`)[0];
+                popup_3027c6e476dc01b9ed3313f1e53488df.setContent(html_4e3823364f13adcba1e064db834b4a87);
+            
+        
+
+        marker_5162a5a1c9615224d45a8f77b71b1d0f.bindPopup(popup_3027c6e476dc01b9ed3313f1e53488df)
+        ;
+
+        
+    
+    
+            marker_5162a5a1c9615224d45a8f77b71b1d0f.bindTooltip(
+                `<div>
+                     Levante UD (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5162a5a1c9615224d45a8f77b71b1d0f.setIcon(icon_70ef6ba3777e502d38b2f3ee4035c587);
+            
+    
+            var marker_09bec4e91321ac3354f1771f5a720a89 = L.marker(
+                [43.36029, -5.84476],
+                {
+}
+            ).addTo(map_33d5b80a5e1bc775e541fb152bdfe78d);
+        
+    
+            var icon_bb63a1f438ed0d3895ed2d03871cc7d8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8b8efdf818f3695131a52e49978cbea2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8bc9f79e8303358137880f5524877d7e = $(`<div id="html_8bc9f79e8303358137880f5524877d7e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; width: 200px;">         <b>Real Oviedo</b><br>         <b>Liga:</b> La Liga<br>         <b>Koordinaten:</b> 43.3603, -5.8448     </div>     </div>`)[0];
+                popup_8b8efdf818f3695131a52e49978cbea2.setContent(html_8bc9f79e8303358137880f5524877d7e);
+            
+        
+
+        marker_09bec4e91321ac3354f1771f5a720a89.bindPopup(popup_8b8efdf818f3695131a52e49978cbea2)
+        ;
+
+        
+    
+    
+            marker_09bec4e91321ac3354f1771f5a720a89.bindTooltip(
+                `<div>
+                     Real Oviedo (La Liga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_09bec4e91321ac3354f1771f5a720a89.setIcon(icon_bb63a1f438ed0d3895ed2d03871cc7d8);
+            
+</script>
+</html>
