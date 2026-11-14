@@ -1,3 +1,10 @@
+"""
+Weather Data Enrichment Script
+Reads match records with coordinates and UTC kickoff times, queries the Open-Meteo 
+Archive API for hourly weather metrics during the match window (kickoff to +2h),
+calculates aggregates (means and sums), and saves the enriched dataset.
+"""
+
 import time
 import pandas as pd
 import requests
