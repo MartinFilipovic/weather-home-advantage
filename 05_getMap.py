@@ -1,3 +1,10 @@
+"""
+Stadien-Mapping-Skript
+Liest die Koordinaten-CSV ein, extrahiert eindeutige Stadien/Heimteams pro Liga 
+und generiert eine interaktive HTML-Karte (Folium) mit farbcodierten Markern 
+und einer Legende.
+"""
+
 import os
 import folium
 import pandas as pd
