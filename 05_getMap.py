@@ -1,15 +1,15 @@
 """
-Stadien-Mapping-Skript
-Liest die Koordinaten-CSV ein, extrahiert eindeutige Stadien/Heimteams pro Liga 
-und generiert eine interaktive HTML-Karte (Folium) mit farbcodierten Markern 
-und einer Legende.
+Stadium Mapping Script
+Reads the coordinate CSV, extracts unique stadiums/home teams per league, 
+and generates an interactive HTML map (Folium) with color-coded markers 
+and a legend.
 """
 
 import os
 import folium
 import pandas as pd
 
-# Pfad zur Datei mit den Koordinaten
+# Path to the file containing coordinates
 input_file = "data/spiele_roh_with_coords.csv"
 output_file = "data/staedte_karte.html"
 
@@ -19,17 +19,17 @@ if not os.path.exists(input_file):
       " Sie sicher, dass 03_getCoordinates.py bereits ausgeführt wurde."
   )
 
-# Daten einlesen
+# Load data
 print(f"Lade Daten aus {input_file}...")
 df = pd.read_csv(input_file)
 
-# Prüfen, ob Koordinaten-Spalten vorhanden sind
+# Check if coordinate columns are present
 if "latitude" not in df.columns or "longitude" not in df.columns:
   raise SystemExit(
       "Die Spalten 'latitude' und 'longitude' fehlen in der CSV-Datei!"
   )
 
-# Eindeutige Teams / Stadien pro Liga extrahieren
+# Extract unique teams / stadiums per league
 df_teams = (
     df[["liga", "heim_id", "heim_team", "latitude", "longitude"]]
     .dropna(subset=["latitude", "longitude"])
@@ -39,17 +39,17 @@ df_teams = (
 
 print(f"{len(df_teams)} Stadien/Teams mit gültigen Koordinaten gefunden.")
 
-# Zentrum der Karte berechnen
+# Calculate the center of the map
 center_lat = df_teams["latitude"].mean()
 center_lon = df_teams["longitude"].mean()
 
-# HINWEIS: 'OpenStreetMap' benötigt keinen API-Key und ist komplett frei
+# NOTE: 'OpenStreetMap' requires no API key and is completely free
 m = folium.Map(
     location=[center_lat, center_lon], zoom_start=5, tiles="OpenStreetMap"
 )
 
 
-# Farben für die verschiedenen Ligen definieren
+# Define colors for the different leagues
 def get_league_color(liga):
   colors = {
       "Premier League": "blue",
@@ -59,7 +59,7 @@ def get_league_color(liga):
   return colors.get(liga, "green")
 
 
-# Marker für jedes Stadion zur Karte hinzufügen
+# Add a marker for each stadium to the map
 for _, row in df_teams.iterrows():
   liga = row.get("liga", "Unbekannt")
   team = row["heim_team"]
@@ -82,7 +82,7 @@ for _, row in df_teams.iterrows():
       icon=folium.Icon(color=color, icon="futbol", prefix="fa"),
   ).add_to(m)
 
-# Legende in der Ecke hinzufügen
+# Add legend in the corner
 legend_html = """
     <div style="position: fixed; 
                 bottom: 50px; right: 50px; width: 180px; height: 110px; 
@@ -96,7 +96,7 @@ legend_html = """
     """
 m.get_root().html.add_child(folium.Element(legend_html))
 
-# Karte speichern
+# Save the map
 os.makedirs("data", exist_ok=True)
 m.save(output_file)
 print(f"Erfolgreich! Die interaktive Karte wurde unter '{output_file}' gespeichert.")
