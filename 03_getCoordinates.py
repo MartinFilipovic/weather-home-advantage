@@ -1,3 +1,10 @@
+"""
+Geocoding Script for Match Data
+Reads a CSV containing match and city information, fetches geographic coordinates 
+(latitude and longitude) using the Open-Meteo API with caching and rate limiting, 
+and saves the enriched dataset.
+"""
+
 import time
 import pandas as pd
 import requests
@@ -21,6 +28,14 @@ base_url = "https://geocoding-api.open-meteo.com/v1/search"
 
 
 def get_coordinates(city_name):
+  """Fetches latitude and longitude for a given city using the Open-Meteo API.
+
+    Args:
+        city_name (str): Name of the city to geocode.
+
+    Returns:
+        tuple: (latitude, longitude) as floats, or (None, None) if not found.
+    """
   if not isinstance(city_name, str) or not city_name.strip():
     return None, None
 
